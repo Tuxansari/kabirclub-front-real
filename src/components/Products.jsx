@@ -22,7 +22,7 @@ const Products = () => {
   useEffect(() => {
     const getProducts = async () => {
       setLoading(true);
-      const response = await fetch("https://fakestoreapi.com/products/");
+      const response = await fetch("http://20.235.242.6:8080/products");
       if (componentMounted) {
         setData(await response.clone().json());
         setFilter(await response.json());
@@ -78,8 +78,8 @@ const Products = () => {
           <button className="btn btn-outline-dark btn-sm m-2" onClick={() => filterProduct("women's clothing")}>
             Women's Clothing
           </button>
-          <button className="btn btn-outline-dark btn-sm m-2" onClick={() => filterProduct("jewelery")}>Jewelery</button>
-          <button className="btn btn-outline-dark btn-sm m-2" onClick={() => filterProduct("electronics")}>Electronics</button>
+          {/* <button className="btn btn-outline-dark btn-sm m-2" onClick={() => filterProduct("jewelery")}>Jewelery</button> */}
+          {/* <button className="btn btn-outline-dark btn-sm m-2" onClick={() => filterProduct("electronics")}>Electronics</button> */}
         </div>
 
         {filter.map((product) => {
@@ -90,7 +90,7 @@ const Products = () => {
                   className="card-img-top p-3"
                   src={product.image}
                   alt="Card"
-                  height={300}
+                  height={450}
                 />
                 <div className="card-body">
                   <h5 className="card-title">
