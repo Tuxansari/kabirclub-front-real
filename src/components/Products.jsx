@@ -86,12 +86,17 @@ const Products = () => {
           return (
             <div id={product.id} key={product.id} className="col-md-4 col-sm-6 col-xs-8 col-12 mb-4">
               <div className="card text-center h-100" key={product.id}>
-                <img
-                  className="card-img-top p-3"
-                  src={product.image}
-                  alt="Card"
-                  height={450}
-                />
+
+                <Link to={"/product/" + product.id} >
+                  <img
+                    className="card-img-top p-3"
+                    src={product.image}
+                    alt="Card"
+                    height={450}
+                  />
+                </Link>
+
+                
                 <div className="card-body">
                   <h5 className="card-title">
                     {product.title}
@@ -101,7 +106,7 @@ const Products = () => {
                   </p>
                 </div>
                 <ul className="list-group list-group-flush">
-                  <li className="list-group-item lead">$ {product.price}</li>
+                  <li className="list-group-item lead">Rs. {product.price}</li>
                   {/* <li className="list-group-item">Dapibus ac facilisis in</li>
                     <li className="list-group-item">Vestibulum at eros</li> */}
                 </ul>
@@ -109,9 +114,9 @@ const Products = () => {
                   <Link to={"/product/" + product.id} className="btn btn-dark m-1">
                     Buy Now
                   </Link>
-                  <button className="btn btn-dark m-1" onClick={() => addProduct(product)}>
+                  {/* <button className="btn btn-dark m-1" onClick={() => addProduct(product)}>
                     Add to Cart
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </div>
