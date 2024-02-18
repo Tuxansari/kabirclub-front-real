@@ -110,14 +110,14 @@ const Products = () => {
                   {/* <li className="list-group-item">Dapibus ac facilisis in</li>
                     <li className="list-group-item">Vestibulum at eros</li> */}
                 </ul>
-                <div className="card-body">
+                {/* <div className="card-body">
                   <Link to={"/product/" + product.id} className="btn btn-dark m-1">
-                    Buy Now
+                    Details
                   </Link>
-                  {/* <button className="btn btn-dark m-1" onClick={() => addProduct(product)}>
+                  <button className="btn btn-dark m-1" onClick={() => addProduct(product)}>
                     Add to Cart
-                  </button> */}
-                </div>
+                  </button>
+                </div> */}
               </div>
             </div>
 
