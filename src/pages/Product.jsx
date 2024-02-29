@@ -24,12 +24,12 @@ const Product = () => {
     const getProduct = async () => {
       setLoading(true);
       setLoading2(true);
-      const response = await fetch(`https://54.162.226.75:8080/products/${id}`);
+      const response = await fetch(`https://api.kabirclub.com/products/${id}`);
       const data = await response.json();
       setProduct(data);
       setLoading(false);
       const response2 = await fetch(
-        `https://54.162.226.75:8080/products/category/${data.category}`
+        `https://api.kabirclub.com/products/category/${data.category}`
       );
       const data2 = await response2.json();
       setSimilarProducts(data2);
